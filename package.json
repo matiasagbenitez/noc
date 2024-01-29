@@ -17,14 +17,17 @@
   "devDependencies": {
     "@types/node": "^20.11.8",
     "@types/nodemailer": "^6.4.14",
+    "prisma": "^5.8.1",
     "rimraf": "^5.0.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@prisma/client": "^5.8.1",
     "cron": "^3.1.6",
     "dotenv": "^16.4.1",
     "env-var": "^7.4.1",
+    "mongoose": "^8.1.1",
     "nodemailer": "^6.9.8"
   }
 }

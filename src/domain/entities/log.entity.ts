@@ -27,7 +27,19 @@ export class LogEntity {
 
     // Método para convertir los JSON strings en objetos
     static fromJson = (json: string): LogEntity => {
+        json = (json === '') ? '{}' : json;
         const { message, level, origin, createdAt } = JSON.parse(json);
+        const log = new LogEntity({
+            level,
+            message,
+            origin,
+            createdAt
+        });
+        return log;
+    }
+
+    static fromObject = (object: { [key: string]: any }): LogEntity => {
+        const { message, level, origin, createdAt } = object;
         const log = new LogEntity({
             level,
             message,
